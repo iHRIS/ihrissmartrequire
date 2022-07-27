@@ -1,0 +1,19 @@
+{
+  "name": "ihrissmartrequire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iHRIS/ihrissmartrequire.git"
+  },
+  "author": "Ally Shaban",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iHRIS/ihrissmartrequire/issues"
+  },
+  "homepage": "https://github.com/iHRIS/ihrissmartrequire#readme"
+}
