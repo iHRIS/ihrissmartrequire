@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/iHRIS/ihrissmartrequire/issues"
   },
-  "homepage": "https://github.com/iHRIS/ihrissmartrequire#readme"
+  "homepage": "https://github.com/iHRIS/ihrissmartrequire#readme",
+  "dependencies": {
+    "underscore": "^1.13.4"
+  }
 }
