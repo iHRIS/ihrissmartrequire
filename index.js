@@ -87,7 +87,7 @@ function getModule(requirement){
             '\nYou can use require("ihrissmartrequire").ignore("folder_to_ignore") to prevent ihrissmartrequire from scanning unwanted folders.');
     } else if(!isDefined(filesInSiteProject[requirement]) && isDefined(ambiguousFileNamesInCore[requirement])) {
         throw new Error('Ambiguity Error: There are more then one files that is named '+requirement+
-            '. \n\t' + ambiguousFileNamesInSite[requirement].join('\n\t') +
+            '. \n\t' + ambiguousFileNamesInCore[requirement].join('\n\t') +
             '\nYou can use require("ihrissmartrequire").ignore("folder_to_ignore") to prevent ihrissmartrequire from scanning unwanted folders.');
     }
     if (isDefined(filesInSiteProject[requirement])){        
