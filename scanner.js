@@ -11,7 +11,7 @@ module.exports = scanner;
 var scanned = false;
 var baseDir
 var extensions
-var foldersToIgnore = ['node_modules'];
+var foldersToIgnore = ['*/node_modules'];
 
 function scanner(){}
 
@@ -115,5 +115,21 @@ function shouldScanFurther(root,file){
 
 function shouldIgnore(root, file){
     var relPath = path.relative(baseDir,root);
-    return !!~foldersToIgnore.indexOf(relPath)
+    let ignore = false
+    for(let folderToIgnore of foldersToIgnore) {
+        if(folderToIgnore.startsWith("*")) {
+            folderToIgnore = folderToIgnore.replace("*/", "")
+            folderToIgnore = folderToIgnore.replace("*", "")
+            ignore = !!~relPath.indexOf(folderToIgnore)
+            if(ignore) {
+                break
+            }
+        } else if(folderToIgnore === relPath) {
+            ignore = true
+            break
+        }
+    }
+    if(ignore) {
+        return ignore
+    }
 }
